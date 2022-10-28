@@ -82,12 +82,12 @@ classDiagram
         isGrabbing() boolean
         pickUp() void
         dropDown() void
-        getConsuptionForPickUp() double
-        getConsuptionForDropDown() double
+        getConsumptionForPickUp() double
+        getConsumptionForDropDown() double
     }
 ```
 
-https://mermaid.live/edit#pako:eNp9U8FuwjAM_ZUqpyEBhx0rhDRAm5A4INi0Sy9p47bR2rhKXBBi_PtSWiAZBZ9iv-fkPVs5sgQFsJAlBTdmIXmmeRmpwMYGY6Rg8jseBzNu4Jy2yDW16GjUEr8l5Z97fNOl8dtdwg2dTJaKQKc8gek0cO7uAfxOr9TKeyLAqQZopTTSbdIyzp47oce21ESJO_iqXgZBjFgAVz6ywL16hK0gpUfYRmZ5L6ghybnOwGI7lOIGZEAzTnYYhxXsoLC4wDouwGOs0UiS2Ei6HF8XLeN05_I6NsdtJZOffrdCY_XIrX15SVCaOddagrAUqejZs5clOC__x162pKXKBj3XdGtzu7uS39SENB-ax7Et9gm_2vVn7Xi9W8IclamrZrLvqNeX_p5deMTF7UaXam2xIStBl1wK--_OjiJGOZQQsdAeBaS8LihikTpZKq8JtweVsJB0DUNWV4ITdD-VhSkvDJz-ANZzM7M
+https://mermaid.live/edit#pako:eNp9U8FuwjAM_ZUqJ5CAw44VQhpUTEgcEGzapZe0cdtoTVwlKQgx_n0pLZCMQk6J37P9nq2cSIoMSEjSkmodcZorKmIZ2LPFBE0w_Z1MgjnVcHm2yO1p0fG4JX5zU3we8F0J7ae7hDs6na6kAZXRFGazwKndA_iZXqiV90KAEw3QSmmk20fLuHjuhJ7aUHME7uGrGgyDBLEEKn0kwoN8hq0hM8-wLc-LXlBBWlCVg8X2yNkdyMHMqbHDOK5hD6XFGdZJCR5jg5objo2k6_UtahnnB5e3sTluK57-9LtlCqtnbm3nlQGhF1QpDsxSuDSv2l6X4HT-jw12RnGZD3vKdGtzs7uQn9Qcrj8UTRIb7BN-s-vP2vH6sIQFSl2LqhntEtXmWqBnGT4zutd0udYYGREBSlDO7M-7eIqJKUBATEJ7ZZDRujQxieXZUmltcHeUKQmNqmFE6opRA91fJWFGSw3nP1ZXNI0
 
 Using (without modifying) the existing classes and the provided UML design scheme,
 create a new `class BasicArm` which models a robotic arm.
