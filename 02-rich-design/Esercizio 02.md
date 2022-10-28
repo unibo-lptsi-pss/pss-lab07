@@ -1,7 +1,7 @@
 
 # Extension of existing software with provided design
 
-Take a look at the contents of `it.unibo.oop.lab04.robot.base`. It contains classes and interfaces modeling a robot that can move into an environment.
+Take a look at the contents of `it.unibo.design.robot` and `it.unibo.design.robot.environment.api`. They contain classes and interfaces modeling a robot that can move into an environment.
 Use the following UML to understand how the system is designed, and use `TestRobots` to better understand how it works.
 
 ```mermaid
