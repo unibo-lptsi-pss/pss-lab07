@@ -53,13 +53,13 @@ create a new `interface RobotWithArms extends Robot` with:
 
 ```mermaid
 classDiagram
-    Robot <|-- BaseRobot
-    RobotWithTwoArms --|> BaseRobot
-    RobotWithArms --|> Robot
+    Robot <|.. BaseRobot
+    BaseRobot <|-- RobotWithTwoArms
+    Robot <|-- RobotWithArms
     <<Interface>> Robot
     <<Interface>> RobotWithArms
-    RobotWithTwoArms --|> RobotWithArms
-    BaseArm --o RobotWithTwoArms
+    RobotWithArms <|.. RobotWithTwoArms
+    RobotWithTwoArms o-- BaseArm
     class Robot {
         moveUp() boolean
         moveDown() boolean
@@ -87,7 +87,7 @@ classDiagram
     }
 ```
 
-https://mermaid.live/edit#pako:eNqFk8FuwjAMhl-lymlI9LJjhZAG1SYkDgg27dJL2rhttCauEheEgHdfChTa0bKckny_Y_-2cmAJCmABSwpubSh5ZriKtOfWGmMkb3L0fW_GLZyPLfItKf_c4ZtR1vP943RQdFe06GSy0AQm5QlM_wPNI8-S9wjretzJcXwIuijOnq8-D5ereincwlf5MvJixAK47pIQd3qILSGlIbaWWd4LDSQ5Nxk4tkUp7iADmnFyzdgvYQuF4wKruICOYoVWksS6pGb7Gl4UpweXt3G03JYy-el3KwyWQ25d5gWBsnNujAThJFLTs7TNtFqZ_7KXDRmps1HPM80sW9HXq25QvaT9MDyO3WVf4Te73V63vD4MYY7aVmXd2Xc0qya-ZxYdYXh_sS11ttiYKTCKS-H-3dlRxCgHBREL3FZAyquCIhbpk5PyinCz1wkLyFQwZlUpOMH1p7Ig5YWF0y_j4DO1
+https://mermaid.live/edit#pako:eNp9U8FuwjAM_ZUqpyEBhx0rhDRAm5A4INi0Sy9p47bR2rhKXBBi_PtSWiAZBZ9iv-fkPVs5sgQFsJAlBTdmIXmmeRmpwMYGY6Rg8jseBzNu4Jy2yDW16GjUEr8l5Z97fNOl8dtdwg2dTJaKQKc8gek0cO7uAfxOr9TKeyLAqQZopTTSbdIyzp47oce21ESJO_iqXgZBjFgAVz6ywL16hK0gpUfYRmZ5L6ghybnOwGI7lOIGZEAzTnYYhxXsoLC4wDouwGOs0UiS2Ei6HF8XLeN05_I6NsdtJZOffrdCY_XIrX15SVCaOddagrAUqejZs5clOC__x162pKXKBj3XdGtzu7uS39SENB-ax7Et9gm_2vVn7Xi9W8IclamrZrLvqNeX_p5deMTF7UaXam2xIStBl1wK--_OjiJGOZQQsdAeBaS8LihikTpZKq8JtweVsJB0DUNWV4ITdD-VhSkvDJz-ANZzM7M
 
 Using (without modifying) the existing classes and the provided UML design scheme,
 create a new `class BasicArm` which models a robotic arm.
