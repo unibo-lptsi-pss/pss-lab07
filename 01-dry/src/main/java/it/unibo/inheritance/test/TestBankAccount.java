@@ -38,7 +38,7 @@ public class TestBankAccount {
         final AccountHolder aRossi = new AccountHolder("Andrea", "Rossi", 1);
         final AccountHolder aBianchi = new AccountHolder("Alex", "Bianchi", 2);
         /*
-         * Change one of the two acounts to ExtendedStrictBankAccount
+         * Change SimpleBankAccount to ExtendedStrictBankAccount
          */
         final BankAccount rossisAccount = new ExtendedStrictBankAccount(aRossi.getUserID(), 0);
         final BankAccount bianchisAccount = new StrictBankAccount(aBianchi.getUserID(), 0);
