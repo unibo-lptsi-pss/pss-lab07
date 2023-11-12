@@ -5,8 +5,8 @@ import it.unibo.bank.api.BankAccount;
 
 public class SimpleBankAccount implements BankAccount {
 
-    protected static final double ATM_TRANSACTION_FEE = 1;
-    protected static final double MANAGEMENT_FEE = 5;
+    public static final double ATM_TRANSACTION_FEE = 1;
+    public static final double MANAGEMENT_FEE = 5;
 
     private final AccountHolder holder;
     private double balance;
@@ -19,31 +19,19 @@ public class SimpleBankAccount implements BankAccount {
     }
 
     public void chargeManagementFees(final int id) {
-        /*
-         * Riduce il bilancio del conto di un ammontare pari alle spese di gestione
-         */
         if (checkUser(id)) {
             this.balance -= SimpleBankAccount.MANAGEMENT_FEE;
             resetTransactions();
+        } else {
+            throw new IllegalArgumentException("ID not corresponding: cannot charge management fees");
         }
     }
 
     public void deposit(final int id, final double amount) {
-        /*
-         * Incrementa il numero di transazioni e aggiunge amount al totale del
-         * conto Nota: il deposito va a buon fine solo se l'id utente
-         * corrisponde
-         */
         this.transactionOp(id, amount);
     }
 
     public void depositFromATM(final int id, final double amount) {
-        /*
-         * Incrementa il numero di transazioni e aggiunge amount al totale del
-         * conto detraendo le spese (costante ATM_TRANSACTION_FEE) relative
-         * all'uso dell'ATM (bancomat) Nota: il deposito va a buon fine solo se
-         * l'id utente corrisponde
-         */
         this.deposit(id, amount - SimpleBankAccount.ATM_TRANSACTION_FEE);
     }
 
@@ -65,22 +53,10 @@ public class SimpleBankAccount implements BankAccount {
     }
 
     public void withdraw(final int id, final double amount) {
-        /*
-         * Incrementa il numero di transazioni e rimuove amount al totale del
-         * conto. Note: - Il conto puo' andare in rosso (ammontare negativo) -
-         * Il prelievo va a buon fine solo se l'id utente corrisponde
-         */
         this.transactionOp(id, -amount);
     }
 
     public void withdrawFromATM(final int id, final double amount) {
-        /*
-         * Incrementa il numero di transazioni e rimuove amount + le spese
-         * (costante ATM_TRANSACTION_FEE) relative all'uso dell'ATM (bancomat)
-         * al totale del conto. Note: - Il conto puo' andare in rosso (ammontare
-         * negativo) - Il prelievo va a buon fine solo se l'id utente
-         * corrisponde
-         */
         this.withdraw(id, amount + SimpleBankAccount.ATM_TRANSACTION_FEE);
     }
 
@@ -100,6 +76,8 @@ public class SimpleBankAccount implements BankAccount {
         if (checkUser(id)) {
             this.balance += amount;
             this.incrementTransactions();
+        } else {
+            throw new IllegalArgumentException("ID not corresponding: cannot perform transaction");
         }
     }
 }
