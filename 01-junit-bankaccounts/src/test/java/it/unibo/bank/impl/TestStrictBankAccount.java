@@ -15,41 +15,31 @@ public class TestStrictBankAccount {
     private AccountHolder mRossi;
     private BankAccount bankAccount;
 
-    /**
-     * Prepare the tests.
-     */
     @BeforeEach
     public void setUp() {
         fail("To be implemented");
     }
 
-    /**
-     * Test the initial state of the StrictBankAccount.
-     */
+    // 2. Test the initial state of the StrictBankAccount
     @Test
     public void testInitialization() {
         fail("To be implemented");
     }
 
-    /**
-     * Perform a deposit of 100€, compute the management fees, and check that the balance is correctly reduced.
-     */
+
+    // 3. Perform a deposit of 100€, compute the management fees, and check that the balance is correctly reduced.
     @Test
     public void testManagementFees() {
         fail("To be implemented");
     }
 
-    /**
-     * Test that withdrawing a negative amount causes a failure.
-     */
+    // 4. Test the withdraw of a negative value
     @Test
     public void testNegativeWithdraw() {
         fail("To be implemented");
     }
 
-    /**
-     * Test that withdrawing more money than it is in the account is not allowed.
-     */
+    // 5. Test withdrawing more money than it is in the account
     @Test
     public void testWithdrawingTooMuch() {
         fail("To be implemented");
