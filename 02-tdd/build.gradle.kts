@@ -26,7 +26,7 @@ application {
     mainClass.set(project.properties["mainClass"].toString())
 }
 
-val test by tasks.getting(Test::class) {
+tasks.withType<Test> {
     // Use junit platform for unit tests
     useJUnitPlatform()
     testLogging {
