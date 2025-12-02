@@ -22,7 +22,7 @@ class TestLineNumbers {
         // Note how the path is relative to the **classpath**!
         // It does not matter where the file actually is, as far as is in this position in the classpath
         final URL fromClasspath = getSystemResource("it/unibo/io/dante.txt");
-        final var file = new File(fromClasspath.getFile());
+        final var file = new File(fromClasspath.toURI());
         LineNumbers.addLineNumbersToTextFile(file);
         final var folder = file.getParent();
         final File produced = new File(folder + File.separator + "numbered-dante.txt");
