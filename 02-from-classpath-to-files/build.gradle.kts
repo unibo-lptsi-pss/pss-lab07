@@ -1,7 +1,7 @@
 plugins {
     application
     java
-    id("org.danilopianini.gradle-java-qa") version "1.170.0"
+    id("org.danilopianini.gradle-java-qa") version "1.171.0"
     id("com.gradleup.shadow") version "9.4.1"
 }
 
