@@ -22,7 +22,7 @@ public final class TarantulaNebula {
      */
     public static void main(final String[] args) {
         if (args.length != 1) {
-            System.out.println(// NOPMD
+            IO.println(
                 "This application requires exactly one parameter (the destination directory) to work, but "
                     + args.length
                     + " were provided instead"
@@ -32,11 +32,11 @@ public final class TarantulaNebula {
         }
         final File destination = new File(args[0]);
         if (!destination.exists() && !destination.mkdirs()) {
-            System.out.println("Cannot create folder " + destination.toPath()); // NOPMD
+            IO.println("Cannot create folder " + destination.toPath());
             System.exit(2);
         }
         if (destination.isFile()) {
-            System.out.println(destination.toPath() + " is a file, not a directory!");  // NOPMD
+            IO.println(destination.toPath() + " is a file, not a directory!");
             System.exit(3);
         }
         for (final var resourceName: List.of("jwst-tarantula-nebula.jpg", "tarantula-nebula.md")) {
