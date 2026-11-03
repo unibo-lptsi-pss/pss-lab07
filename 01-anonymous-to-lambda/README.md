@@ -1,8 +1,6 @@
 # Classi anonime e lambda
 
-Si osservino la classe `Student` (package `it.unibo.lambdas.model`), che modella uno studente con i crediti (CFU)
-acquisiti e la media dei voti, e la classe `SampleStudents` (package `it.unibo.lambdas.test`), che fornisce alcuni
-studenti di esempio.
+Si osservino la classe `Student` (package `it.unibo.lambdas.model`), che modella uno studente con i crediti (CFU) acquisiti e la media dei voti, e la classe `SampleStudents` (package `it.unibo.lambdas.test`), che fornisce alcuni studenti di esempio.
 Queste due classi non vanno modificate.
 
 ## Parte 1: `Comparator` come classe separata
