@@ -5,11 +5,11 @@ Tutto il codice va scritto all'interno della classe `it.unibo.team.Team`.
 
 ## Parte 1: enum innestata
 
-All'interno di `Team`, si crei una `enum Role` pubblica che modella i ruoli di un giocatore: `GOALKEEPER` (portiere), `DEFENDER` (difensore), `MIDFIELDER` (centrocampista) e `FORWARD` (attaccante).
+Si osservi l'enumerazione `Role` innestata dentro `Team` e se ne studi l'utilizzo attuale nel codice.
 
 ## Parte 2: classe innestata
 
-All'interno di `Team`, si crei una classe innestata pubblica `Player` che modella un giocatore, caratterizzato da nome, numero di maglia e ruolo (`Role`).
+All'interno di `Team`, si completi la classe innestata pubblica `Player` che modella un giocatore, caratterizzato da nome, numero di maglia e ruolo (`Role`).
 La classe deve essere immutabile, deve avere un costruttore `Player(String name, int number, Role role)` ed i relativi getter.
 
 Si completi poi `Team` con:
@@ -35,7 +35,7 @@ Si provi a rispondere alle seguenti domande:
 
 ## Parte 4: classe inner
 
-All'interno di `Team`, si crei una classe inner (non `static`) pubblica `Lineup` che modella la formazione titolare di una partita, ed un metodo `Lineup newLineup()` in `Team` che ne restituisce una nuova, vuota.
+All'interno di `Team`, si completi la classe inner (non `static`) pubblica `Lineup` che modella la formazione titolare di una partita, e si crei un metodo `Lineup newLineup()` in `Team` che ne restituisce una nuova, vuota.
 `Lineup` deve avere i metodi:
 - `boolean addStarter(Player player)`, che ritorna false se il giocatore non fa parte della squadra o se la formazione ha già 11 giocatori;
 - `boolean isComplete()`, che restituisce `true` se la formazione ha 11 giocatori, di cui esattamente un portiere;
